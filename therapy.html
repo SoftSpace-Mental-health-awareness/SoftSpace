@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Daily Routine | Soft Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f6fafb;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      color: #333;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 2rem auto;
+    }
+
+    .section {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, opacity 0.6s ease;
+      opacity: 0;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+    }
+
+    .section h2 {
+      color: #444;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .section img {
+      width: 70%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 1rem 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin: 0.6rem 0;
+    }
+
+    /* Do's & Don'ts section */
+    .dos-donts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      padding: 1.5rem;
+      border-radius: 12px;
+      color: #fff;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .dos {
+      background: linear-gradient(135deg, #a8e6cf, #56ab91);
+    }
+
+    .donts {
+      background: linear-gradient(135deg, #fbb1bd, #ec6f75);
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .dos ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #fff;
+    }
+
+    .donts ul li::before {
+      content: "✘";
+      position: absolute;
+      left: 0;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #a8edea;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #444;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    /* Quote styling */
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Healthy Daily Routine & Lifestyle Guide</h1>
+    <p>Your Calm Path to Balance, Energy, and Wellness</p>
+  </header>
+
+  <div class="container">
+    
+    <div class="section">
+      <h2>🌅 Morning Rituals</h2>
+      <img src="C:\Users\pratiksha\OneDrive\Desktop\minor project\morning.jpg" alt="Morning routine image">
+      <ul>
+        <li>Start your day with 5 minutes of deep breathing or meditation.</li>
+        <li>Drink a glass of water with lemon or herbal tea to rehydrate.</li>
+        <li>Do light stretches, yoga, or a short walk to wake your body.</li>
+        <li>Write 2–3 things you’re grateful for in a journal.</li>
+        <li>Eat a wholesome breakfast with proteins, fruits, and whole grains.</li>
+        <li>Set 1–2 realistic goals for the day to stay focused.</li>
+      </ul>
+      <p class="quote">“A calm morning leads to a peaceful day.”</p>
+    </div>
+
+    <div class="section">
+      <h2>📅 Daily Activities</h2>
+      <img src="C:\Users\pratiksha\OneDrive\Desktop\minor project\daily.jpg" alt="Daily activities image">
+      <ul>
+        <li>Spend 30 minutes outdoors in fresh air and sunlight.</li>
+        <li>Engage in creative activities like journaling, music, or art.</li>
+        <li>Take mindful breaks after every 1–2 hours of work or study.</li>
+        <li>Maintain a balanced diet with regular small meals.</li>
+        <li>Practice random acts of kindness, even small gestures.</li>
+        <li>End your day by reading, journaling, or gratitude reflection.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>✅ Do’s & ❌ Don’ts</h2>
+      <div class="dos-donts">
+        <div class="card dos">
+          <h3>Do’s</h3>
+          <ul>
+            <li>Maintain a consistent sleep schedule.</li>
+            <li>Practice gratitude daily and reflect on small wins.</li>
+            <li>Stay physically active at least 20–30 minutes daily.</li>
+            <li>Seek help when you feel overwhelmed.</li>
+            <li>Surround yourself with positive and supportive people.</li>
+            <li>Use mindfulness or relaxation techniques for stress.</li>
+          </ul>
+        </div>
+        <div class="card donts">
+          <h3>Don’ts</h3>
+          <ul>
+            <li>Skip meals or replace them with junk food.</li>
+            <li>Overload your day with unrealistic tasks.</li>
+            <li>Compare your progress constantly with others.</li>
+            <li>Overconsume caffeine, alcohol, or sugary snacks.</li>
+            <li>Bottle up emotions—talk, write, or express them.</li>
+            <li>Spend excessive time on screens, especially before bed.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💤 Sleep Hygiene</h2>
+      <img src="https://i.pinimg.com/736x/02/ad/76/02ad764e99aff965a3209d6ea14a9d6d.jpg" alt="Sleep image">
+      <ul>
+        <li>Sleep and wake up at the same time daily, even on weekends.</li>
+        <li>Avoid caffeine, heavy meals, and screens 1–2 hours before bed.</li>
+        <li>Keep your bedroom cool, dark, and quiet.</li>
+        <li>Establish a relaxing night routine: herbal tea, journaling, soft music.</li>
+        <li>If you can’t sleep, do a quiet activity (reading) instead of using your phone.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🤝 Social Connection</h2>
+      <img src="https://i.pinimg.com/736x/47/81/00/478100ca9e1981fc127e6463214d7178.jpg" alt="Friends support image">
+      <ul>
+        <li>Call or meet a loved one regularly to stay connected.</li>
+        <li>Join clubs, communities, or support groups that share your interests.</li>
+        <li>Share your thoughts and struggles with someone you trust.</li>
+        <li>Engage in group activities like volunteering or sports.</li>
+        <li>Limit exposure to negative or toxic environments.</li>
+      </ul>
+      <p class="quote">“Connection is not about quantity but quality.”</p>
+    </div>
+
+    <div class="section">
+      <h2>🎨 Creative Expression</h2>
+      <img src="https://i.pinimg.com/736x/2a/24/26/2a24263885e2ad462d5a2247760bb542.jpg" alt="Creative activity image">
+      <ul>
+        <li>Express your feelings through journaling, painting, or poetry.</li>
+        <li>Use music or dance as a form of emotional release.</li>
+        <li>Start a personal project or hobby that excites you.</li>
+        <li>Allow yourself to create without judgment or perfection.</li>
+        <li>Creativity reduces stress and builds resilience.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🌱 Coping in Stressful Times</h2>
+      <img src="https://i.pinimg.com/736x/8f/a5/1d/8fa51d511602776a2901f584b9a6429d.jpg" alt="Coping with stress image">
+      <ul>
+        <li>Practice grounding techniques (like 5–4–3–2–1 method).</li>
+        <li>Take slow, mindful breaths to calm your nervous system.</li>
+        <li>Break overwhelming tasks into smaller, achievable steps.</li>
+        <li>Practice self-compassion: treat yourself as you would a friend.</li>
+        <li>Engage in physical activity — even a short walk helps.</li>
+        <li>Remind yourself: “This moment is temporary. It will pass.”</li>
+      </ul>
+      <p class="quote">“You are stronger than the storm you face.”</p>
+    </div>
+
+  </div>
+
+<footer>
+    <a href="home.html" class="back-home">🏠 Back to Home</a>
+      </footer>
+
+
+
+  <footer>
+    🌸 Soft Space | Your Calm Corner in a Busy World 🌸
+  </footer>
+
+  <script>
+    // Scroll-triggered animations
+    const sections = document.querySelectorAll('.section');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight * 0.9;
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if(rect.top < trigger){
+          sec.classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

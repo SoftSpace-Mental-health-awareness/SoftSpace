@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoftSpace Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{
+      background:linear-gradient(135deg,#fef6e4,#8ecae6);
+      display:flex;align-items:center;justify-content:center;
+      height:100vh;color:#023047;
+    }
+    .login-container{
+      background:#ffffffcc;
+      padding:35px 45px;
+      border-radius:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,.1);
+      text-align:center;
+      width:320px;
+      animation:fadeIn .8s ease;
+    }
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+    h1{margin-bottom:20px;color:#023047;}
+    input{
+      width:100%;padding:10px;margin:10px 0;
+      border:1px solid #8ecae6;border-radius:8px;outline:none;
+      font-size:1rem;
+    }
+    button{
+      width:100%;padding:10px;margin-top:10px;
+      background:#219ebc;color:white;border:none;border-radius:8px;
+      font-size:1rem;cursor:pointer;
+      transition:background .3s;
+    }
+    button:hover{background:#023047;}
+    p{margin-top:10px;font-size:.9rem;color:#315b6e;}
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Welcome to SoftSpace</h1>
+    <p>Your Calm Corner in a Busy World</p>
+    <form id="loginForm">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if(name && email){
+        localStorage.setItem('softspaceUser', JSON.stringify({name,email}));
+        window.location.href='home.html';
+      }
+    });
+  </script>
+</body>
+</html>

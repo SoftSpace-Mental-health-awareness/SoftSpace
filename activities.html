@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mindful Activities - SoftSpace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
+
+    body{
+      background: linear-gradient(135deg, #f8f9fa, #d9f0f8);
+      color:#023047;
+      min-height:100vh;
+      padding:20px;
+      display:flex; flex-direction:column; align-items:center;
+    }
+
+    header{text-align:center; margin-bottom:25px;}
+    header h1{ font-size:2rem; margin-bottom:6px; }
+    header p{ font-size:1.05rem; color:#555; }
+
+    .section{
+      background:#ffffffcc;
+      padding:20px;
+      border-radius:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      max-width:850px; width:100%; margin:15px 0;
+    }
+    .section h2{ color:#219ebc; margin-bottom:12px; }
+    .section p{ color:#333; line-height:1.7; }
+    ul{ margin-top:10px; padding-left:18px; }
+    ul li{ margin:8px 0; line-height:1.5; }
+
+    .media-box{
+      margin-top:15px; text-align:center;
+    }
+    
+    .media-box iframe{
+      width:100%; max-width:500px; height:280px; border:none; border-radius:12px;
+    }
+
+    /* Breathing Exercise */
+    .breathing-container{
+      text-align:center; margin-top:20px;
+    }
+    .circle{
+      width:120px; height:120px;
+      border-radius:50%;
+      background:#90e0ef;
+      margin:20px auto;
+      transition: all 4s ease-in-out;
+    }
+    .breathing-text{ font-size:1.2rem; margin-top:10px; }
+    .breathing-controls button{
+      padding:10px 18px; margin-top:10px;
+      background:#219ebc; color:#fff; border:none;
+      border-radius:12px; cursor:pointer;
+    }
+    .breathing-controls button:hover{ background:#023047; }
+
+    /* Music Player */
+    .music-player{
+      background:#ffffffcc;
+      border-radius:14px;
+      box-shadow:0 4px 14px rgba(0,0,0,.1);
+      padding:15px 20px;
+      margin-top:15px;
+      display:flex; align-items:center; gap:15px;
+      justify-content:center;
+    }
+    .music-player button{
+      background:#219ebc; border:none; color:#fff;
+      padding:10px 16px; border-radius:10px;
+      cursor:pointer; font-size:1rem;
+    }
+    .music-player button:hover{ background:#023047; }
+
+    /* Game */
+    #gameArea{
+      width:100%; height:300px;
+      background:#f0f9ff; border:2px dashed #90e0ef;
+      position:relative; margin-top:15px; border-radius:12px;
+      overflow:hidden;
+    }
+    .game-controls button{
+      background:#219ebc; border:none; color:#fff;
+      padding:10px 16px; border-radius:10px;
+      cursor:pointer; font-size:1rem;
+    }
+    .game-controls button:hover{ background:#023047; }
+    .emoji{
+      position:absolute; font-size:2rem; cursor:pointer;
+    }
+    #scoreDisplay{ margin-top:10px; font-weight:bold; }
+
+    footer{
+      margin-top:30px; padding:15px; text-align:center;
+      color:#444; font-size:.9rem;
+    }
+    .back-home{
+      display:inline-block; margin-top:15px; padding:10px 16px;
+      background:#219ebc; color:#fff; border-radius:12px;
+      text-decoration:none;
+    }
+    .back-home:hover{ background:#023047; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌸 Mindful Activities 🌸</h1>
+    <p>Gentle practices to bring peace, positivity, and relaxation into your day.</p>
+  </header>
+
+  <!-- Meditation -->
+  <div class="section">
+    <h2>🧘 Meditation</h2>
+    <p>Meditation is the art of calming the mind and focusing on the present moment. 
+       Just 1–2 minutes of deep breathing daily can reduce stress, improve focus, and bring emotional balance.</p>
+    <ul>
+      <li>🌿 Sit comfortably, close your eyes, and inhale slowly through the nose.</li>
+      <li>☁ Hold your breath for 3 seconds, then exhale gently.</li>
+      <li>🪷 Repeat this cycle for 1–2 minutes to feel relaxed.</li>
+    </ul>
+    <div class="media-box">
+      <!-- Meditation video -->
+      <iframe src="https://www.youtube.com/embed/inpok4MKVLM" 
+              title="Meditation video" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Yoga -->
+  <div class="section">
+    <h2>🧘‍♀ Yoga</h2>
+    <p>Yoga combines gentle movements, stretching, and breathing. Even simple postures help release tension and improve flexibility.</p>
+    <ul>
+      <li>🌞 <b>Morning:</b> Try Surya Namaskar (Sun Salutation) for energy.</li>
+      <li>🌙 <b>Night:</b> Practice Child’s Pose or Butterfly Pose for relaxation.</li>
+      <li>💓 Yoga balances the body, mind, and emotions, reducing anxiety.</li>
+    </ul>
+    <div class="media-box">
+      <!-- Yoga video -->
+      <iframe src="https://www.youtube.com/embed/v7AYKMP6rOE" 
+              title="Yoga video" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Breathing Exercise -->
+  <div class="section">
+    <h2>🌬 Breathing Exercise</h2>
+    <div class="breathing-container">
+      <div class="circle" id="circle"></div>
+      <div class="breathing-text" id="breathingText">Press Start to Begin</div>
+      <div id="timerDisplay">02:00</div>
+      <div class="breathing-controls">
+        <button onclick="startBreathing()">▶ Start Breathing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music Therapy -->
+  <div class="section">
+    <h2>🎶 Music Therapy</h2>
+    <p>Music Therapy is a powerful way to heal the mind. The right sounds can lower stress, improve mood, and even help with sleep.</p>
+    <ul>
+      <li>🎵 Calm Instrumentals: Soft piano, flute, or guitar for relaxation.</li>
+      <li>🌊 Nature Sounds: Rain, ocean waves, or birdsong for peace.</li>
+      <li>💖 Heart-Opening Music: Gentle rhythms that uplift mood.</li>
+      <li>🛌 Sleep Music: Slow ambient sounds help you drift off calmly.</li>
+    </ul>
+    <div class="media-box">
+      <!-- Music Therapy video -->
+      <iframe src="https://www.youtube.com/embed/2OEL4P1Rz04" 
+              title="Music therapy video" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+      <button id="playPauseBtn">▶ Play Music</button>
+      <audio id="bgMusic" loop>
+        <source src="C:\Users\pratiksha\Downloads\WhatsApp Audio 2025-11-11 at 4.09.17 PM.mpeg"audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <!-- Stress Relief Game -->
+  <div class="section">
+    <h2>🎮 Stress Relief Game</h2>
+    <p>Release your stress by punching emojis! Click on them as they appear. </p>
+    <p>⏱ The game lasts 1 minute.</p>
+    <div class="game-controls">
+      <button onclick="startGame()">▶ Start Game</button>
+    </div>
+    <div id="gameArea"></div>
+    <div id="scoreDisplay">Score: 0</div>
+  </div>
+
+  <footer>
+    <a href="home.html" class="back-home">🏠 Back to Home</a>
+    <p>✨ Take a pause. Breathe. Relax. Your peace matters. ✨</p>
+  </footer>
+
+  <script>
+    // Breathing Exercise
+    let breathingInterval, timerInterval;
+    function startBreathing(){
+      let circle=document.getElementById("circle");
+      let text=document.getElementById("breathingText");
+      let timer=document.getElementById("timerDisplay");
+      let time=120;
+
+      clearInterval(breathingInterval);
+      clearInterval(timerInterval);
+
+      function cycle(){
+        text.textContent="🌬 Inhale...";
+        circle.style.transform="scale(1.5)";
+        setTimeout(()=>{
+          text.textContent="💨 Exhale...";
+          circle.style.transform="scale(1)";
+        },4000);
+      }
+      cycle();
+      breathingInterval=setInterval(cycle,8000);
+
+      timerInterval=setInterval(()=>{
+        time--;
+        let m=Math.floor(time/60);
+        let s=time%60;
+        timer.textContent=`${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+        if(time<=0){
+          clearInterval(breathingInterval);
+          clearInterval(timerInterval);
+          text.textContent="✅ Session Complete!";
+          circle.style.transform="scale(1)";
+        }
+      },1000);
+    }
+
+    // Music Player
+    const music=document.getElementById("bgMusic");
+    const btn=document.getElementById("playPauseBtn");
+    let playing=false;
+    btn.addEventListener("click",()=>{
+      if(!playing){ music.play(); btn.textContent="⏸ Pause Music"; }
+      else{ music.pause(); btn.textContent="▶ Play Music"; }
+      playing=!playing;
+    });
+
+    // Stress Relief Game
+    let gameInterval, gameTime, score;
+    function startGame(){
+      const area=document.getElementById("gameArea");
+      const scoreDisplay=document.getElementById("scoreDisplay");
+      score=0; gameTime=60;
+      scoreDisplay.textContent="Score: 0";
+      area.innerHTML="";
+      clearInterval(gameInterval);
+
+      gameInterval=setInterval(()=>{
+        if(gameTime<=0){
+          clearInterval(gameInterval);
+          alert("⏱ Time's up! Your Score: "+score);
+          return;
+        }
+        let emoji=document.createElement("div");
+        emoji.classList.add("emoji");
+        emoji.textContent="😡";
+        emoji.style.left=Math.random()*(area.clientWidth-30)+"px";
+        emoji.style.top=Math.random()*(area.clientHeight-30)+"px";
+        area.appendChild(emoji);
+        emoji.addEventListener("click",()=>{
+          score++;
+          scoreDisplay.textContent="Score: "+score;
+          emoji.remove();
+        });
+        setTimeout(()=>{
+          if(emoji.parentNode){emoji.remove();}
+        },1500);
+        gameTime--;
+      },1000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoftSpace – Subscription Plans</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    *{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
+
+    body{
+        background:linear-gradient(135deg, #f8fbff, #d8f3ff);
+        padding:40px;
+        color:#023047;
+    }
+
+    /* NAVBAR */
+    nav{
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 5%;
+        background:#ffffffdd;
+        border-radius:15px;
+        box-shadow:0 8px 20px rgba(0,0,0,0.08);
+        margin-bottom:40px;
+    }
+
+    nav h2{
+        font-size:1.6rem;
+        font-weight:700;
+        color:#219ebc;
+    }
+
+    nav a{
+        margin-left:20px;
+        text-decoration:none;
+        font-weight:600;
+        color:#023047;
+        transition:0.2s ease;
+    }
+
+    nav a:hover{
+        color:#219ebc;
+    }
+
+    header{text-align:center; margin-bottom:40px;}
+    header h1{font-size:2.4rem; font-weight:700; color:#023047;}
+    header p{font-size:1.1rem; color:#555; margin-top:8px;}
+
+    .plans-container{
+        max-width:1100px;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+        gap:30px;
+    }
+
+    .plan-card{
+        background:#ffffffdd;
+        padding:32px 28px;
+        border-radius:22px;
+        text-align:center;
+        box-shadow:0 10px 25px rgba(0,0,0,0.08);
+        transition:0.3s ease;
+        border-top:6px solid transparent;
+    }
+
+    .plan-card:hover{
+        transform:translateY(-8px);
+        box-shadow:0 14px 32px rgba(0,0,0,0.15);
+    }
+
+    .popular{
+        border-top-color:#219ebc;
+        background:#ffffffee;
+    }
+
+    .plan-card h2{
+        font-size:1.7rem;
+        font-weight:600;
+        color:#219ebc;
+        margin-bottom:12px;
+    }
+
+    .price{
+        font-size:1.9rem;
+        font-weight:700;
+        margin:10px 0 20px;
+        color:#023047;
+    }
+
+    ul{list-style:none; margin-bottom:20px;}
+    ul li{
+        margin:12px 0;
+        font-size:0.95rem;
+        color:#495057;
+        position:relative;
+        padding-left:24px;
+    }
+
+    ul li::before{
+        content:"•";
+        position:absolute;
+        left:0;
+        color:#219ebc;
+        font-size:1.4rem;
+        line-height:0;
+    }
+
+    .btn{
+        padding:12px 20px;
+        background:#219ebc;
+        color:#fff;
+        border-radius:12px;
+        text-decoration:none;
+        font-weight:600;
+        transition:.25s ease;
+        display:inline-block;
+        box-shadow:0 4px 12px rgba(33,158,188,0.25);
+    }
+
+    .btn:hover{
+        background:#023047;
+        transform:translateY(-2px);
+    }
+
+    footer{
+        text-align:center;
+        margin-top:45px;
+        font-size:.9rem;
+        color:#666;
+    }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>SoftSpace 🌿</h2>
+    <div>
+        <a href="home.html">Home</a>
+        <a href="subscriptions.html" style="color:#219ebc;">Subscriptions</a>
+        <a href="activities.html">Activities</a>
+        <a href="resources.html">Contact</a>
+    </div>
+</nav>
+
+<header>
+    <h1>Choose Your SoftSpace Plan</h1>
+    <p>Find the perfect plan for your wellness journey 💙</p>
+</header>
+
+<div class="plans-container">
+
+    <!-- FREE PLAN -->
+    <div class="plan-card">
+        <h2>Free Plan</h2>
+        <p class="price">₹0 / month</p>
+        <ul>
+            <li>Basic mindful activities</li>
+            <li>Daily affirmation</li>
+            <li>Standard emotional check-in</li>
+        </ul>
+        <a href="#" class="btn">Continue Free</a>
+    </div>
+
+    <!-- PLUS PLAN -->
+    <div class="plan-card popular">
+        <h2>SoftSpace Plus ✨</h2>
+        <p class="price">₹99 / month</p>
+        <ul>
+            <li>All activities & tools unlocked</li>
+            <li>Advanced mental health quizzes</li>
+            <li>Ad-free experience</li>
+        </ul>
+        <a href="#" class="btn">Upgrade to Plus</a>
+    </div>
+
+    <!-- PRO PLAN -->
+    <div class="plan-card">
+        <h2>SoftSpace Pro 💛</h2>
+        <p class="price">₹199 / month</p>
+        <ul>
+            <li>Everything in Plus</li>
+            <li>1 monthly wellness mentoring session</li>
+            <li>Exclusive guided meditation library</li>
+        </ul>
+        <a href="#" class="btn">Get Pro</a>
+    </div>
+
+</div>
+
+<footer>
+    SoftSpace — Bringing calm to your everyday life 🍃
+</footer>
+
+</body>
+</html>
